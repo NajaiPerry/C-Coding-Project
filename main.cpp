@@ -1,4 +1,10 @@
 #include <iostream>
+#include "StoryOne.h"
+#include "StoryTwo.h"
+#include "StoryThree.h"
+#include "StoryFour.h"
+#include "StoryFive.h"
+#include "StorySix.h"
 
 using namespace std;
 void intro();
@@ -14,23 +20,19 @@ void intro()
 
     if (choice == 1)
     {
-        gold = (gold - 250);
-        endgamegold = 100 + endgamegold;
+        cout << "\n You have chosen Greater Third Ward as your location \n";
     }
 
     if (choice == 2)
     {
-        gold = (gold - 550);
-        endgamegold = 300 + endgamegold;
+        cout << "\n You have chosen Museum District as your location \n";
     }
 
     if (choice == 3)
     {
-        gold = (gold - 1000);
-        endgamegold = 400 + endgamegold;
+        cout << "\n You have chosen Downtown as your location \n";
     }
 
-    cout << "\n Remaining Gold: " << gold << "\n";
     cout << "\n Now that you have picked a location it's time to pick an assisted contractor to help you on the job. \n ";
 }
 
@@ -38,14 +40,14 @@ void intro2()
 {
     if (choice2 == 1)
     {
-        gold = (gold - 500);
+       cout << "\n Have chosen Bill Joe as your assisting contractor for this project \n ";
     }
 
     if (choice2 == 2)
     {
-        gold = (gold - 250);
+       cout << "\n Have chosen Joe Bill as your assisting contractor for this project \n ";
     }
-    cout << "\n Remaining Gold: " << gold << "\n";
+
 }
 
 
@@ -53,7 +55,7 @@ void intro2()
 int main()
 {
     cout << "Welcome to Tower Build where you have been tasked to build the world's second largest building in Houston, Texas.\n";
-    cout << "\n"; // rules
+    cout << "\n When picking your choice, you will type in the number that corresponds with that choice. \n"; // rules
     cout << "\nThe contractor that you work for has loaned you 5000 gold to complete this project.\n";
     cout << "\nThe first task on your agenda is to pick a location for you to build your building.\n";
 
@@ -100,44 +102,38 @@ int main()
             case 3:
                 intro2();
                 break;
-
         }
-      break;
+
 
     if (choice == 1 && choice2 == 1) // story 1
     {
-
-
+        StoryOne One;
     }
 
     if (choice == 2 && choice2 == 1) // story 2
     {
-
-
+        StoryTwo Two;
     }
 
     if (choice == 3 && choice2 == 1) // story 3
     {
-
-
+        StoryThree Three;
     }
 
     if (choice == 1 && choice2 == 2) // story 4
     {
-
-
+        StoryFour Four;
     }
 
     if (choice == 2 && choice2 == 2) // story 5
     {
-
-
+        StoryFive Five;
     }
     if (choice == 3 && choice2 == 2) // story 6
     {
-
-
+        StorySix Six;
     }
 
     return 0;
+}
 }
